@@ -1,15 +1,16 @@
 pipeline {
     agent any
 
-  environment {
-    AWS_REGION   = "eu-north-1"
-    ECR_REGISTRY = "062000001223.dkr.ecr.eu-north-1.amazonaws.com"
-    ECR_REPO     = "ecr123"
-    IMAGE_NAME   = "ecr123"
-    IMAGE_TAG    = "${BUILD_NUMBER}"
-}
-
-
+    environment {
+        AWS_REGION     = "eu-north-1"
+        ACCOUNT_ID     = "062000001223"
+        ECR_REPO       = "ecr123"
+        IMAGE_NAME     = "ecr123"
+        IMAGE_TAG      = "${BUILD_NUMBER}"
+        APP_EC2_HOST   = "172.31.31.43"
+        CONTAINER_NAME = "student-app"
+        APP_PORT       = "80"
+    }
 
     stages {
 
