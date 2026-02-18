@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_REGION    = "eu-north-1"
         ECR_REGISTRY  = "062000001223.dkr.ecr.eu-north-1.amazonaws.com/ecr123"
-        ECR_REPO      = "ecr123"
+        ECR_REPO      = "Jenkinsrepo"
         IMAGE_TAG     = "${BUILD_NUMBER}"
         APP_EC2_HOST  = "172.31.31.43"
         CONTAINER_NAME = "student-app"
